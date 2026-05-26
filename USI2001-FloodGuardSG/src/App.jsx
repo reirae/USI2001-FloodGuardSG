@@ -1,4 +1,6 @@
 import { useState, useEffect, useRef } from "react";
+import logo from './assets/floodguard-logo.png'
+import map from './assets/singapore-map.png'
 
 const COLORS = {
   blue: "#1a6eb5", blueDark: "#0d4a82", blueLight: "#e8f2fb",
@@ -357,7 +359,7 @@ export default function FloodGuardSG() {
       <div style={{ background: `linear-gradient(135deg,${COLORS.blueDark} 0%,${COLORS.blue} 60%,#1a8c9b 100%)`, padding: "0.75rem 1.5rem", display: "flex", alignItems: "center", gap: 14 }}>
         {/* Logo */}
         <img
-          src="/floodguard-logo.png"
+          src={logo}
           alt="FloodGuard SG logo"
           style={{ height: 56, width: "auto", objectFit: "contain", flexShrink: 0, mixBlendMode: "screen" }}
         />
@@ -395,7 +397,7 @@ export default function FloodGuardSG() {
                 {/* PNG map cropped to Singapore bounds via background-image */}
                 <div style={{
                   position: "absolute", top: 0, left: 0, width: "100%", height: "100%",
-                  backgroundImage: "url('/singapore-map.png')",
+                  backgroundImage: `url(${map})`,
                   backgroundSize: "900px 608px",
                   backgroundPosition: "-10px -40px",
                   backgroundRepeat: "no-repeat",
